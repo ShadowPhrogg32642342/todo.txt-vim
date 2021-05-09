@@ -18,8 +18,10 @@ setlocal wrapmargin=0
 
 " Mappings {{{1
 " Sort tasks {{{2
-nnoremap <script> <silent> <buffer> <localleader>s :%sort<CR>
-vnoremap <script> <silent> <buffer> <localleader>s :sort<CR>
+nnoremap <script> <silent> <buffer> <localleader>s  :%call TodoSmartSort()<CR>
+vnoremap <script> <silent> <buffer> <localleader>s  :call TodoSmartSort()<CR>
+nnoremap <script> <silent> <buffer> <localleader>sp :%sort<CR>
+vnoremap <script> <silent> <buffer> <localleader>sp :sort<CR>
 nnoremap <script> <silent> <buffer> <localleader>s@ :%call todo#txt#sort_by_context()<CR>
 vnoremap <script> <silent> <buffer> <localleader>s@ :call todo#txt#sort_by_context()<CR>
 nnoremap <script> <silent> <buffer> <localleader>s+ :%call todo#txt#sort_by_project()<CR>
@@ -81,6 +83,12 @@ function! s:todo_fold_text()
     return '+' . v:folddashes . ' '
                 \ . (v:foldend - v:foldstart + 1)
                 \ . ' Completed tasks '
+endfunction
+
+function! TodoSmartSort()
+    :sort /@[a-zA-Z]*/ r
+    :sort /+[a-zA-Z]*/ r
+    :sort /\v([A-Z]\)/ r
 endfunction
 
 " Restore context {{{1
