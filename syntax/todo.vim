@@ -59,9 +59,12 @@ highlight  default  link  TodoComment    Comment
 highlight  default  link  TodoPriorityA  Constant
 highlight  default  link  TodoPriorityB  Statement
 highlight  default  link  TodoPriorityC  Identifier
+highlight  default        TodoPriorityM  guifg=#777777
+highlight  default        TodoPriorityI  guifg=#999999
 highlight  default  link  TodoDate       PreProc
 highlight  default  link  TodoProject    Special
 highlight  default  link  TodoContext    Special
+highlight  default  link  TodoTag        Special
 
 if exists('g:todo_load_python') && g:todo_load_python
     if has('python')
