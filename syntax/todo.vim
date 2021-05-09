@@ -10,6 +10,16 @@ if exists("b:current_syntax")
 endif
 
 syntax  match  TodoDone       '^[xX]\s.\+$'
+syntax  match  TodoPriority0  '^(0)\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
+syntax  match  TodoPriority1  '^(1)\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
+syntax  match  TodoPriority2  '^(2)\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
+syntax  match  TodoPriority3  '^(3)\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
+syntax  match  TodoPriority4  '^(4)\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
+syntax  match  TodoPriority5  '^(5)\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
+syntax  match  TodoPriority6  '^(6)\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
+syntax  match  TodoPriority7  '^(7)\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
+syntax  match  TodoPriority8  '^(8)\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
+syntax  match  TodoPriority9  '^(9)\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
 syntax  match  TodoPriorityA  '^([aA])\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
 syntax  match  TodoPriorityB  '^([bB])\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
 syntax  match  TodoPriorityC  '^([cC])\s.\+$'             contains=TodoDate,TodoProject,TodoContext,OverDueDate
