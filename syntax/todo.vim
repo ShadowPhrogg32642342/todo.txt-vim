@@ -51,7 +51,7 @@ syntax  match  TodoComment    '^#\s.\+$'
 syntax  match  TodoDate       '\d\{2,4\}-\d\{2\}-\d\{2\}' contains=NONE
 syntax  match  TodoProject    '\s+[^[:blank:]]\+'  contains=NONE
 syntax  match  TodoContext    '\s@[^[:blank:]]\+'  contains=NONE
-syntax  match  TodoTag        '\s[0-9a-z]\+:[0-9A-Za-z]\+\($\|\s\)' contains=NONE
+syntax  match  TodoTag        '\s#[0-9a-z]\+:[0-9A-Za-z]\+\($\|\s\)' contains=NONE
 
 " Other priority colours might be defined by the user
 highlight  default        TodoDone       guifg=#555555
